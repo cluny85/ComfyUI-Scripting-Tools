@@ -1,0 +1,4 @@
+from .enhanced_uuid_generator import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
+from .uuid_generator_node import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
+
+__all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS"]
