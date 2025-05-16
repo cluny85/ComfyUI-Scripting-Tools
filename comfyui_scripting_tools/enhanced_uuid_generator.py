@@ -16,12 +16,24 @@ class EnhancedUUIDGeneratorNode:
             try:
                 return uuid.UUID(custom_namespace_uuid_str)
             except ValueError:
-                raise ValueError("Invalid custom namespace UUID string.")
+                raise ValueError(
+                    "Invalid custom namespace UUID string."
+                )
         else:
-            raise ValueError("Invalid namespace type.")
+            raise ValueError(
+                "Invalid namespace type."
+            )
 
-    def generate_uuid_enhanced(self, uuid_type, namespace_type="DNS", custom_namespace_uuid="",
-                               name_string="example.com", prefix="", suffix="", trigger=0):
+    def generate_uuid_enhanced(
+        self,
+        uuid_type,
+        namespace_type="DNS",
+        custom_namespace_uuid="",
+        name_string="example.com",
+        prefix="",
+        suffix="",
+        trigger=0,
+    ):
         if trigger == 0:
             return None
 
@@ -36,7 +48,9 @@ class EnhancedUUIDGeneratorNode:
         elif uuid_type == "UUID5":
             generated_uuid = uuid.uuid5(namespace, name_string)
         else:
-            raise ValueError("Invalid UUID type.")
+            raise ValueError(
+                "Invalid UUID type."
+            )
 
         return f"{prefix}{generated_uuid}{suffix}"
 
@@ -46,4 +60,6 @@ NODE_CLASS_MAPPINGS = {
     "EnhancedUUIDGeneratorNode": EnhancedUUIDGeneratorNode
 }
 
-NODE_DISPLAY_NAME_M
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "EnhancedUUIDGeneratorNode": "Enhanced UUID Generator"
+}
