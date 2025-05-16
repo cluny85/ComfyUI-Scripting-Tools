@@ -1,6 +1,8 @@
 import uuid
 
+
 class EnhancedUUIDGeneratorNode:
+
     def get_namespace(self, namespace_type, custom_namespace_uuid_str):
         if namespace_type == "DNS":
             return uuid.NAMESPACE_DNS
@@ -38,13 +40,10 @@ class EnhancedUUIDGeneratorNode:
 
         return f"{prefix}{generated_uuid}{suffix}"
 
+
 # --- Mapeo para que ComfyUI reconozca el nodo ---
 NODE_CLASS_MAPPINGS = {
     "EnhancedUUIDGeneratorNode": EnhancedUUIDGeneratorNode
 }
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "EnhancedUUIDGeneratorNode": "Generate UUID (Enhanced)"
-}
-
-print("--- Custom Node: Enhanced UUID Generator loaded ---")
+NODE_DISPLAY_NAME_M
