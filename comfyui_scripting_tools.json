@@ -1,8 +1,8 @@
 {
-  "name": "ComfyUI-scripting-tools",
+  "name": "ComfyUI-Scripting-Tools",
   "author": "Oscar Mesa (cluny85)",
   "description": "A set of scripting utility nodes for ComfyUI, including an enhanced UUID generator.",
   "version": "1.0.0",
   "license": "MIT",
-  "entry_point": "comfyui_scripting_tools"
+  "entry_point": "src"
 }
