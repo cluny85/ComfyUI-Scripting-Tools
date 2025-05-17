@@ -1,7 +1,7 @@
 [project]
 name = "ComfyUI-Scripting-Tools"
 description = "A set of utility nodes for ComfyUI focused on scripting. Includes an enhanced UUID generator node."
-version = "1.0.0"
+version = "1.0.1"
 license = {file = "LICENSE"}
 dependencies = ["# No external dependencies required"]
 
