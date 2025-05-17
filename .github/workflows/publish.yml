@@ -33,7 +33,7 @@ jobs:
           test -f comfyui_scripting_tools.json
       - name: Show publish instructions
         run: |
-          echo "To publish this package, follow the instructions at https://registry.comfy.org/docs/publish-extension/"
+          echo "To publish this package, follow the instructions at https://docs.comfy.org/registry/publishing"
 
   publish:
     name: "📦 Publish Custom Node to registry"
