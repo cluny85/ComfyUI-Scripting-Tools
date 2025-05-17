@@ -22,7 +22,7 @@ jobs:
       - name: Lint Python files
         run: |
           pip install flake8
-          flake8 comfyui_scripting_tools --max-line-length=120
+          flake8 src --max-line-length=120
       - name: Check metadata file
         run: |
           test -f comfyui_scripting_tools.json
