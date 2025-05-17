@@ -45,7 +45,7 @@ class UUIDGeneratorNode:
 
     # Define the category where the node will appear in ComfyUI's menu
     CATEGORY = (
-        "utils/text"
+        "ComfyUI-Scripting-Tools"
     )  # You can change "utils/text" to your preference
 
     # Indicates if this node is a final output node (like SaveImage)

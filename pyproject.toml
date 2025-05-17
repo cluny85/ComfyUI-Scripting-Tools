@@ -8,6 +8,8 @@ dependencies = ["# No external dependencies required"]
 [project.urls]
 Repository = "https://github.com/cluny85/ComfyUI-Scripting-Tools"
 #  Used by Comfy Registry https://comfyregistry.org
+bugs = "https://github.com/cluny85/ComfyUI-Scripting-Tools/issues"
+homepage = "https://github.com/cluny85/ComfyUI-Scripting-Tools"
 
 [tool.comfy]
 PublisherId = "cluny85"
