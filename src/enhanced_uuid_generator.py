@@ -6,8 +6,14 @@ class EnhancedUUIDGeneratorNode:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "uuid_type": (["UUID1", "UUID3", "UUID4", "UUID5"], {"default": "UUID4"}),
-                "namespace_type": (["DNS", "URL", "OID", "X500", "CUSTOM"], {"default": "DNS"}),
+                "uuid_type": (
+                    ["UUID1", "UUID3", "UUID4", "UUID5"],
+                    {"default": "UUID4"}
+                ),
+                "namespace_type": (
+                    ["DNS", "URL", "OID", "X500", "CUSTOM"],
+                    {"default": "DNS"}
+                ),
                 "name_string": ("STRING", {"default": "example.com"}),
                 "trigger": ("INT", {"default": 0, "min": 0, "max": 1}),
             },
@@ -55,10 +61,14 @@ class EnhancedUUIDGeneratorNode:
         elif uuid_type == "UUID4":
             generated_uuid = uuid.uuid4()
         elif uuid_type == "UUID3":
-            namespace = self.get_namespace(namespace_type, custom_namespace_uuid)
+            namespace = self.get_namespace(
+                namespace_type, custom_namespace_uuid
+            )
             generated_uuid = uuid.uuid3(namespace, name_string)
         elif uuid_type == "UUID5":
-            namespace = self.get_namespace(namespace_type, custom_namespace_uuid)
+            namespace = self.get_namespace(
+                namespace_type, custom_namespace_uuid
+            )
             generated_uuid = uuid.uuid5(namespace, name_string)
         else:
             raise ValueError("Invalid UUID type")
