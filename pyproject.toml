@@ -10,6 +10,6 @@ Repository = "https://github.com/cluny85/ComfyUI-Scripting-Tools"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = "@cluny85"
+PublisherId = "cluny85"
 DisplayName = "ComfyUI-Scripting-Tools"
 Icon = ""
