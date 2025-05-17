@@ -1,8 +1,11 @@
 name: Publish ComfyUI Scripting Tools
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
+    paths:
+      - "pyproject.toml"
   pull_request:
     branches: [ master ]
 
@@ -31,7 +34,7 @@ jobs:
           echo "To publish this package, follow the instructions at https://registry.comfy.org/docs/publish-extension/"
 
   publish:
-    name: "📦 Publish Custom Node"
+    name: "📦 Publish Custom Node to registry"
     needs: build-and-check
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/')
