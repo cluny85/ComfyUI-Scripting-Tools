@@ -1,4 +1,4 @@
-# ComfyUI-scripting-tools
+# ComfyUI-Scripting-Tools
 
 ## Description
 
